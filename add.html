@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add A Post</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body align=center>
+      <form action="{{ upload_url }}" method="post" enctype="multipart/form-data" align=center>
+      <br>  <div class="container p-3 my-3 bg-dark text-white">
+
+        <br>  <h1>Add a post to your Timeline</h1><br>
+        <div class="col">
+          Upload Image: <input type="file" accept="image/jpeg,image/x-png" name="file" /><br/>
+          Add a Caption to Image: <input type="text" name="caption"><br>
+          <input type="submit"/>
+
+        </div>
+      </div>
+    </form>
+  </body>

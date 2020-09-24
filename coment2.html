@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head><style media="screen">
+    img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 300px;
+}
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <meta charset="utf-8">
+    <title>add comnts</title>
+  </head>
+  <body align=center>
+      <div class="container p-3 my-3 bg-dark text-white"><br>
+        <h2 style="text-align:center;"><b>]Comments</b></h2>
+          <div class="container" align=center>
+      <img src="{{im}}"><br>
+      <a href="/viewcoments?button=True&img={{im}}" class="btn btn-primary">Add Comment</a>
+      </div></div>
+      <br><br>
+    <div class="container">
+
+      <table class="table table-hover"><tr>
+        <th>User</th>
+        <th>Comment</th>
+        </tr>
+        {%for i in range(0,lengthofc)%}
+        <tr>
+          <td>{{allcom[i].user}}</td>
+          <td>{{allcom[i].comments}}</td>
+        </tr>
+      {%endfor%}
+      </table>
+      <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">More Comments</button>
+      <div id="demo" class="collapse">
+        <table class="table table-hover">
+          {%for i in range(6,lengthofc1)%}
+          <tr>
+            <td>{{allcom[i].user}}</td>
+            <td>{{allcom[i].comments}}</td>
+          </tr>
+        {%endfor%}
+        </table>
+      </div>
+    </div>
+
+  </body>
+</html>

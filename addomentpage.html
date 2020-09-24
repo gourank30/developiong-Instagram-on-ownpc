@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <title>Add Comment</title>
+  </head>
+  <body>
+    <form action="/viewcoments" method="get">
+    <div class="container p-3 my-3 bg-dark text-white">
+      <br>  <h1 style="text-align:center;"><b> Add a Comment to post </b></h1><br>
+      <div class="col">
+          <div class="container" align=center>
+        <input type="hidden" name="img" value="{{img}}">
+        Comment: <textarea name="comments" rows="8" cols="80" maxlength="200"></textarea>
+        <input type="submit" name="submit" value="submit">
+        </div></div>
+        </div>
+      </form>
+
+  </body>
+</html>

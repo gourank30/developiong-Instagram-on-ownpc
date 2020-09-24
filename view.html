@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> View Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body align=center>
+    <div class="container p-3 my-3 bg-primary text-white">
+      <h2 align=center><b>List Of User</b></h2><br>
+      <input type="button" class="button buttonS" value="Back" onclick="history.back()" align=center><br><br>
+
+    </div>
+    <div class="container">
+      {%for i in range(0,le)%}
+          <a href="/prof?button=True&use={{li[i]}}">{{li[i]}}</a>
+      {%endfor%}
+    </div>
+
+  </body>
+</html>

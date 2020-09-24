@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Search page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <form  action="/seruse" method="get" align=center>
+      <div class="container p-3 my-3 bg-primary text-white">
+        <h1>Search</h1><br>
+        <div class="row-6">
+            <input type="email" name="use" placeholder="Enter Email Id."> <input type="submit" name="submit" value="submit" id="submit">
+        </div>
+      </div><br><br>
+      <div class="container p-3 my-3 border">
+        <h4>Search Result</h4>
+        <table class="table table-dark table-hover" >
+          <thead>
+            <th>User</th>
+          </thead>
+          {%for i in x%}
+          <tbody>
+            <td>
+            <a href="/prof?button=True&use={{i.email_address}}">{{i.email_address}}</a>
+            </td>
+          </tbody>
+          {%endfor%}
+        </table>
+
+
+      </div>
+
+    </form>
+  </body>
+</html>

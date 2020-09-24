@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile of other user</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <form action="/prof" method="get" align=center><br>
+      <div class="container p-3 my-3 bg-dark text-white">
+        <h1><b>{{use}}</b></h1>
+        {%if followings%}
+        <button type="button" name="buttonf1"><a href="/unflowuser?button=True&use={{use}}">Following</a></button>
+        {%else%}
+        <button type="button" name="buttonf2"><a href="/flowuser?button=True&use={{use}}">Follow</a></button>
+        {%endif%}
+        <div class="col-6">
+          Followers:<a href="/viewflo1?button=True&use={{use}}"class="btn btn-primary">{{count1}}</a>
+          Following:<a href="/viewing1?button=True&use={{use}}"class="btn btn-primary">{{count2}}</a>
+        </div>
+    </div><br><br>
+      <div class="container">
+      <h2>Post</h2>
+      {%for i in range(0,noofp)%}
+      <div class="col-6">
+      <div class="card" style="width:400px">
+        <img class="card-img-top" src="{{im[i]}}" alt="Post" style="width:100%">
+        <div class="card-body">
+          <h4 class="card-title"><b>{{cap[i]}}</b></h4>
+          <a href="/viewcoments?button=True&im={{im[i]}}" class="btn btn-primary">View Coments</a>
+        </div>
+      </div>
+      <br>
+    </div>
+        {%endfor%}
+        <div>
+    </form>
+  </body>
+</html>
